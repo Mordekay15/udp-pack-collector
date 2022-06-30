@@ -1,0 +1,12 @@
+Package: lb1-dbgsym
+Source: lb1
+Version: 1.0-1
+Auto-Built-Package: debug-symbols
+Architecture: amd64
+Maintainer: Ekaterina Stepanova <stepkate125@gmail.com>
+Installed-Size: 32
+Depends: lb1 (= 1.0-1)
+Section: debug
+Priority: optional
+Description: debug symbols for lb1
+Build-Ids: 10413e869bbd36a1bbb7c09e937471d8e1e59856 142df2ed9557f06e0256ee474c334b6c6598d5db ef868fd67f6c83e54f069b2c72e1d045f767e2fe

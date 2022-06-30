@@ -1,0 +1,12 @@
+Source: lb1
+Section: misc
+Priority: optional
+Maintainer: Ekaterina Stepanova <stepkate125@gmail.com>
+Build-Depends: debhelper:all (>= 9.0.0)
+Standards-Version: 1.0.0
+
+Package: lb1
+Architecture: any
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Description: Collection of statistics on network traffic
+    Lab #1

@@ -1,0 +1,5 @@
+Format: https:/www.debian.org/doc/packing-manuals/copyright-format/1.0/
+Upstream-Name: lb1
+
+Files: DEBIAN/*
+License: MIT

@@ -1,0 +1,30 @@
+UTIL1_1=src/util1_1/util1_1.c
+UTIL1_2=src/util1_2/util1_2.c
+UTIL2=src/util2/util2.c
+
+F=-pthread
+S=-lrt
+
+all: util1_1 util1_2 util2
+
+util1_1: $(UTIL1_1)
+	gcc -o $@ $^ $(F) $(S)
+
+util1_2: $(UTIL1_2)
+	gcc -o $@ $^ $(F) $(S)
+
+util2: $(UTIL2)
+	gcc -o $@ $^ $(S)
+
+install: all
+	install -d -m 0755 $(DESTDIR)/usr/bin/
+	install -m 0755 util1_1 util1_2 util2 $(DESTDIR)/usr/bin/
+
+clean:
+	rm -f util1_1 util1_2 util2
+
+deb:
+	dpkg-buildpackage -uc -us
+
+mrproper:
+	dh_clean
